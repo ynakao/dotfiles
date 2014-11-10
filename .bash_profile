@@ -29,6 +29,3 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # golang settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-# sphinx locale settings
-export LC_ALL='C'
