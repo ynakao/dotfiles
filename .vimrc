@@ -39,6 +39,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'briancollins/vim-jst'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'fatih/vim-go'
@@ -51,6 +52,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'wavded/vim-stylus'
 NeoBundle 'wting/rust.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
