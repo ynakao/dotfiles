@@ -29,3 +29,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # golang settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# aws-cli command completion
+complete -C aws_completer aws
