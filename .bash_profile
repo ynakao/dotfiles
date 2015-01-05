@@ -32,3 +32,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # aws-cli command completion
 complete -C aws_completer aws
+
+# Homebrew Cask installation directory
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
