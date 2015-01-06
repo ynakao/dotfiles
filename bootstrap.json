@@ -1,0 +1,46 @@
+{
+    "after-scripts": [
+        "brew linkapps"
+    ],
+    "casks": [
+        "alfred",
+        "amethyst",
+        "android-file-transfer",
+        "bettertouchtool",
+        "calibre",
+        "dropbox",
+        "firefox",
+        "google-chrome",
+        "google-japanese-ime",
+        "iterm2",
+        "keepassx",
+        "limechat",
+        "owncloud",
+        "vagrant",
+        "virtualbox",
+        "vlc",
+        "wacom-tablet",
+        "xquartz",
+        "yorufukurou"
+    ],
+    "formulas": [
+        "brew-cask",
+        "curl",
+        "fish",
+        "git",
+        "go",
+        "macvim --with-cscope --with-lua --HEAD",
+        "neovim --HEAD",
+        "openssl",
+        "python",
+        "python3",
+        "tig",
+        "tmux",
+        "tree",
+        "wget"
+    ],
+    "taps": [
+        "caskroom/cask",
+        "neovim/neovim"
+    ]
+}
