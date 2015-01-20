@@ -1,5 +1,6 @@
-# 標準のプロンプト PS1="\h:\W \u\\$ "
-# \h ホスト名, \w 作業ディレクトリをホームからの絶対パスで表示, \W 作業ディレクトリのみ表示, \u ユーザー名, \$の前にはエスケープの\が必要か。
+# default prompt PS1="\h:\W \u\\$ "
+# \h hostname, \w abs pwd from home dir, \W only pwd, \u username
+# "\" required before "\$" to escape
 PS1="\W \\$ "
 
 # Set architecture flags

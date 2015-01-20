@@ -12,6 +12,8 @@ set wrapscan "restart search from the begining when hit the last one
 set wrap
 set noeb vb t_vb= "disable beep
 set encoding=utf-8
+set backspace=2 "make backspace work
+set clipboard=unnamed "enable copy with system clipboard
 language C
 
 " <key mapping>
