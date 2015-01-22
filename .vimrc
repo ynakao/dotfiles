@@ -14,6 +14,7 @@ set noeb vb t_vb= "disable beep
 set encoding=utf-8
 set backspace=2 "make backspace work
 set clipboard=unnamed "enable copy with system clipboard
+set conceallevel=0 "disable the auto-hide feature
 language C
 
 " <key mapping>
