@@ -14,7 +14,7 @@ set noeb vb t_vb= "disable beep
 set encoding=utf-8
 set backspace=2 "make backspace work
 set clipboard=unnamed "enable copy with system clipboard
-set conceallevel=0 "disable the auto-hide feature
+"set conceallevel=0 "disable the auto-hide feature
 language C
 
 " <key mapping>
@@ -153,3 +153,7 @@ let g:pymode_rope = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_html_checkers = ['jshint']
+
+" indentLine settings
+" disable auto hide feature
+let g:indentLine_noConcealCursor = ""
