@@ -14,14 +14,13 @@
         "google-japanese-ime",
         "iterm2",
         "keepassx",
-        "limechat",
+        "night-owl",
         "owncloud",
         "vagrant",
         "virtualbox",
         "vlc",
         "wacom-tablet",
-        "xquartz",
-        "yorufukurou"
+        "xquartz"
     ],
     "formulas": [
         "brew-cask",
@@ -30,6 +29,7 @@
         "git",
         "go",
         "ghostscript",
+        "irssi",
         "macvim --with-cscope --with-lua --HEAD",
         "neovim --HEAD",
         "openssl",
