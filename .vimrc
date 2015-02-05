@@ -48,6 +48,7 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'klen/python-mode'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
@@ -157,3 +158,7 @@ let g:syntastic_html_checkers = ['jshint']
 " indentLine settings
 " disable auto hide feature
 let g:indentLine_noConcealCursor = ""
+
+" tagbar settings
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_width = 25
