@@ -30,6 +30,8 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 # golang settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+# this line required if you install go from homebrew?
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # aws-cli command completion
 complete -C aws_completer aws
