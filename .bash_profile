@@ -25,7 +25,9 @@ export TERM=xterm-256color
 alias vim='mvim --remote-tab-silent'
 
 # cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# from pip v6.0 no need to config cache settings?
+# https://pip.pypa.io/en/latest/reference/pip_install.html#caching
+# export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 # golang settings
 export GOPATH=$HOME/go
