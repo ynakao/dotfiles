@@ -22,7 +22,7 @@ export CLICOLOR=1
 export TERM=xterm-256color
 
 # macvim settings
-alias vim='mvim --remote-tab-silent'
+# alias vim='mvim --remote-tab-silent'
 
 # cache pip-installed packages to avoid re-downloading
 # from pip v6.0 no need to config cache settings?
