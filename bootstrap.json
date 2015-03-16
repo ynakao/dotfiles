@@ -29,7 +29,6 @@
         "git",
         "go",
         "ghostscript",
-        "irssi",
         "macvim --with-cscope --with-lua --HEAD",
         "neovim --HEAD",
         "openssl",
@@ -39,6 +38,7 @@
         "tig",
         "tmux",
         "tree",
+        "weechat",
         "wget"
     ],
     "taps": [
