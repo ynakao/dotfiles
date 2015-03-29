@@ -88,7 +88,7 @@ let g:lightline = {
 " </lightline config>
 
 " NERDTree Toggle
-nnoremap <F1> :NERDTreeToggle<cr>
+nnoremap <F2> :NERDTreeToggle<cr>
 
 " <Neocomplete settings>
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
