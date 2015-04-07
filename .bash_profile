@@ -6,9 +6,9 @@ PS1="\W \\$ "
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
 # Load .bashrc if it exists
-test -f ~/.bashrc && source ~/.bashrc
+# test -f ~/.bashrc && source ~/.bashrc
 
 # To fix pelican-quickstart error
 # http://stackoverflow.com/questions/19961239/pelican-3-3-pelican-quickstart-error-valueerror-unknown-locale-utf-8

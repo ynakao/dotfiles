@@ -80,7 +80,6 @@ set t_Co=256
 let g:lightline = {
       \ 'colorscheme': 'solarized'
       \ }
-" </lightline config>
 
 " NERDTree Toggle
 nnoremap <F2> :NERDTreeToggle<cr>
@@ -143,7 +142,6 @@ let g:pymode_lint = 0
 let g:pymode_rope_completion = 0
 " Turn on the rope script
 let g:pymode_rope = 0
-" </python-mode settings>
 
 " syntastic settings
 let g:syntastic_python_checkers = ['flake8']
