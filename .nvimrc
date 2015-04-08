@@ -31,7 +31,7 @@ endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
-Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
@@ -50,13 +50,6 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
-
-" lightline settings
-set laststatus=2
-set t_Co=256
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
 
 " tagbar settings
 nmap <Space>t :TagbarToggle<CR>
