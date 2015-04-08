@@ -11,11 +11,10 @@ set wrapscan
 set wrap
 set encoding=utf-8
 set clipboard+=unnamedplus
+set noeb vb t_vb= "disable beep
 set backspace=2
-" in fish shell might need to add
-set shell=/bin/sh
-" write after "set nocompatible"
-set whichwrap=b,s,h,l,<,>,[,],~
+set shell=/bin/sh " in fish shell might need to add
+set whichwrap=b,s,h,l,<,>,[,],~ " write after "set nocompatible"
 syntax enable
 
 inoremap jj <Esc>
