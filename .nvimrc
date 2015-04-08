@@ -51,6 +51,9 @@ set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
 
+" vim-airline settings
+set laststatus=2
+
 " tagbar settings
 nmap <Space>t :TagbarToggle<CR>
 let g:tagbar_width = 20
