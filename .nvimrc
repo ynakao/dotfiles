@@ -31,17 +31,40 @@ endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
+" </vim-plug settings>
 
-" <YouCompleteMe settings>
+" YouCompleteMe settings
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
 let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
 let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 
-" <vim-color-solarized settings>
+" vim-color-solarized settings
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors=256
+
+" lightline settings
+set laststatus=2
+set t_Co=256
+let g:lightline = {
+      \ 'colorscheme': 'solarized'
+      \ }
+
+" tagbar settings
+nmap <Space>t :TagbarToggle<CR>
+let g:tagbar_width = 20
+
+" syntastic settings
+let g:syntastic_python_checkers = ['flake8']
+
+" indentLine settings
+" disable auto hide feature
+let g:indentLine_noConcealCursor = ""

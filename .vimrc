@@ -153,5 +153,5 @@ let g:syntastic_html_checkers = ['jshint']
 let g:indentLine_noConcealCursor = ""
 
 " tagbar settings
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_width = 15
+nmap <Space>t :TagbarToggle<CR>
+let g:tagbar_width = 20
