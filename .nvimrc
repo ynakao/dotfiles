@@ -16,6 +16,8 @@ set backspace=2
 set shell=/bin/sh " in fish shell might need to add
 set whichwrap=b,s,h,l,<,>,[,],~ " write after "set nocompatible"
 syntax enable
+let mapleader="\<Space>"
+nnoremap <Space> <Nop>
 
 inoremap jj <Esc>
 
@@ -55,7 +57,7 @@ let g:solarized_termcolors=256
 set laststatus=2
 
 " tagbar settings
-nmap <Space>t :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 let g:tagbar_width = 20
 
 " syntastic settings
@@ -64,3 +66,6 @@ let g:syntastic_python_checkers = ['flake8']
 " indentLine settings
 " disable auto hide feature
 let g:indentLine_noConcealCursor = ""
+
+" vim-go settings
+au FileType go nmap <leader>r :GoRun<CR>
