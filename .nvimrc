@@ -34,6 +34,7 @@ Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
+Plug 'fatih/vim-go'
 
 call plug#end()
 " </vim-plug settings>
