@@ -37,6 +37,7 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 " </vim-plug settings>
