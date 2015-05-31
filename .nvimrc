@@ -49,6 +49,8 @@ let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language
 let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 
+let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
+
 " vim-color-solarized settings
 set background=dark
 colorscheme solarized
