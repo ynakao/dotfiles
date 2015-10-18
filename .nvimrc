@@ -15,6 +15,7 @@ set noeb vb t_vb= "disable beep
 set backspace=2
 set shell=/bin/sh " in fish shell might need to add
 set whichwrap=b,s,h,l,<,>,[,],~ " write after "set nocompatible"
+set rtp+=/usr/local/opt/fzf
 syntax enable
 let mapleader="\<Space>"
 nnoremap <Space> <Nop>
