@@ -23,7 +23,7 @@ nnoremap <Space> <Nop>
 inoremap jj <Esc>
 
 " <vim-plug settings>
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
