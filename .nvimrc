@@ -15,7 +15,6 @@ set noeb vb t_vb= "disable beep
 set backspace=2
 set shell=/bin/sh " in fish shell might need to add
 set whichwrap=b,s,h,l,<,>,[,],~ " write after "set nocompatible"
-set rtp+=/usr/local/opt/fzf
 syntax enable
 let mapleader="\<Space>"
 nnoremap <Space> <Nop>
@@ -45,6 +44,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
 Plug 'davidhalter/jedi-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 " </vim-plug settings>
