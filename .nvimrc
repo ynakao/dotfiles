@@ -20,7 +20,10 @@ syntax enable
 let mapleader="\<Space>"
 nnoremap <Space> <Nop>
 
+" key bindings
 inoremap jj <Esc>
+" tap completion in deoplete
+imap <Tab> <C-N>
 
 " <vim-plug settings>
 call plug#begin('~/.config/nvim/plugged')
