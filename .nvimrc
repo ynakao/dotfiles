@@ -45,6 +45,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
 Plug 'davidhalter/jedi-vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 " </vim-plug settings>
