@@ -25,17 +25,17 @@ inoremap jj <Esc>
 " <vim-plug settings>
 call plug#begin('~/.config/nvim/plugged')
 
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.sh --clang-completer
-  endif
-endfunction
+" function! BuildYCM(info)
+"   if a:info.status == 'installed' || a:info.force
+"     !./install.sh --clang-completer
+"   endif
+" endfunction
 
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
@@ -43,15 +43,15 @@ Plug 'rust-lang/rust.vim'
 call plug#end()
 " </vim-plug settings>
 
-" YouCompleteMe settings
-let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
-let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
-let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
-let g:ycm_complete_in_comments = 1 " Completion in comments
-let g:ycm_complete_in_strings = 1 " Completion in string
-
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
+" " YouCompleteMe settings
+" let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+" let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+" let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+" let g:ycm_complete_in_comments = 1 " Completion in comments
+" let g:ycm_complete_in_strings = 1 " Completion in string
+" 
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
 
 " vim-color-solarized settings
 set background=dark
@@ -65,8 +65,8 @@ set laststatus=2
 nmap <leader>t :TagbarToggle<CR>
 let g:tagbar_width = 20
 
-" syntastic settings
-let g:syntastic_python_checkers = ['flake8']
+" " syntastic settings
+" let g:syntastic_python_checkers = ['flake8']
 
 " indentLine settings
 " disable auto hide feature
