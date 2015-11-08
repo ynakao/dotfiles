@@ -43,6 +43,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
+Plug 'benekastah/neomake'
 
 call plug#end()
 " </vim-plug settings>
@@ -90,3 +91,8 @@ let g:go_highlight_build_constraints = 1
 let g:deoplete#enable_at_startup = 1
 " Use smartcase.
 let g:deoplete#enable_smart_case = 1
+
+" neomake settings
+let g:neomake_python_enabled_makers = ['flake8']
+" run neomake on the current file on every write
+autocmd! BufWritePost * Neomake
