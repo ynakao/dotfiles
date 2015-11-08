@@ -44,6 +44,7 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 " </vim-plug settings>
@@ -96,3 +97,10 @@ let g:deoplete#enable_smart_case = 1
 let g:neomake_python_enabled_makers = ['flake8']
 " run neomake on the current file on every write
 autocmd! BufWritePost * Neomake
+
+" jedi-vim and deoplete config
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#show_call_signatures = 0
