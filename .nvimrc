@@ -2,7 +2,8 @@ set number
 set title
 set showmatch
 set tabstop=4
-set smartindent
+" set smartindent
+set cindent
 set shiftwidth=4
 set expandtab
 set ignorecase
