@@ -46,6 +46,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
 Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'justmao945/vim-clang'
+Plug 'Rip-Rip/clang_complete'
 
 call plug#end()
 " </vim-plug settings>
@@ -107,3 +109,10 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#show_call_signatures = 0
 let g:jedi#force_py_version = 3
 set completeopt-=preview
+
+" clang_complete and deoplete config
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_default_keymappings = 0
+let g:clang_use_library = 1
+let g:clang_library_path = "/usr/local/opt/llvm/lib/"
