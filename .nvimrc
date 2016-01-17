@@ -22,8 +22,10 @@ nnoremap <Space> <Nop>
 
 " key bindings
 inoremap jj <Esc>
-" tap completion in deoplete
-imap <Tab> <C-N>
+" tab completion in deoplete
+inoremap <silent><expr> <Tab>
+        \ pumvisible() ? "\<C-n>" :
+        \ deoplete#mappings#manual_complete()
 
 " <vim-plug settings>
 call plug#begin('~/.config/nvim/plugged')
