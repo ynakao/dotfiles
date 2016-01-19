@@ -39,6 +39,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 " </vim-plug settings>
