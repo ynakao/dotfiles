@@ -46,7 +46,8 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'justmao945/vim-clang'
 Plug 'Rip-Rip/clang_complete'
@@ -104,13 +105,13 @@ let g:neomake_python_enabled_makers = ['flake8']
 autocmd! BufWritePost * Neomake
 
 " jedi-vim and deoplete config
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#show_call_signatures = 0
-let g:jedi#force_py_version = 3
-set completeopt-=preview
+" autocmd FileType python setlocal omnifunc=jedi#completions
+" let g:jedi#completions_enabled = 0
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#smart_auto_mappings = 0
+" let g:jedi#show_call_signatures = 0
+" let g:jedi#force_py_version = 3
+" set completeopt-=preview
 
 " clang_complete and deoplete config
 let g:clang_complete_auto = 0
