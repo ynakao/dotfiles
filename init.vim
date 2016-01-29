@@ -38,7 +38,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
+" Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 " Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
