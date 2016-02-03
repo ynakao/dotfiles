@@ -54,6 +54,9 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
 
+" Enable python3 completetion
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
+
 " vim-color-solarized settings
 set background=dark
 colorscheme solarized
