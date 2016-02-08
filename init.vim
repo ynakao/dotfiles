@@ -40,6 +40,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'benekastah/neomake'
 
 call plug#end()
 " </vim-plug settings>
@@ -87,3 +88,9 @@ let g:go_highlight_build_constraints = 1
 
 "Rust semantic completion
 let g:ycm_rust_src_path = '~/Downloads/SyncDL/rust/src'
+
+" neomake settings
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_javascript_enabled_makers = ['jshint']
+" run neomake on the current file on every write
+autocmd! BufWritePost * Neomake
