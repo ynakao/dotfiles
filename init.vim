@@ -58,6 +58,8 @@ let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
 " Enable python3 completetion
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 " vim-color-solarized settings
 set background=dark
 colorscheme solarized
