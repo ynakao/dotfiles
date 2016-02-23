@@ -52,6 +52,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'justmao945/vim-clang'
 " Plug 'Rip-Rip/clang_complete'
+Plug 'zchee/deoplete-clang'
 
 call plug#end()
 " </vim-plug settings>
@@ -121,3 +122,32 @@ autocmd! BufWritePost * Neomake
 " let g:clang_default_keymappings = 0
 " let g:clang_use_library = 1
 " let g:clang_library_path = "/usr/local/opt/llvm/lib/"
+
+" deoplete-clang config
+" libclang shared library path
+let g:deoplete#sources#clang#libclang_path = '/usr/local/opt/llvm/lib/libclang.dylib'
+" or
+"let g:deoplete#sources#clang#libclang_path = '/opt/llvm/lib/libclang.so'
+
+" clang builtin header path
+let g:deoplete#sources#clang#clang_header = '/usr/local/opt/llvm/lib/clang/3.6.2/include/'
+
+" libclang default compile flags
+let g:deoplete#sources#clang#flags = ['-x', 'c', '-std=c11']
+" or c++
+let g:deoplete#sources#clang#flags = ['-x', 'c++', '-std=c++11']
+
+" libclang complete result sort algorism
+" Default: '' -> deoplete.nvim delault sort order
+" libclang priority sort order
+let g:deoplete#sources#clang#sort_algo = 'priority'
+" alphabetical sort order
+let g:deoplete#sources#clang#sort_algo = 'alphabetical'
+
+" compile_commands.json directory path
+" Not file path. Need build directory path
+" let g:deoplete#sources#clang#clang_complete_database = '/path/to/neovim/build'
+
+" debug
+" let deoplete#enable_debug = 1
+" let g:deoplete#sources#clang#debug#log_file = '~/.log/nvim/python/deoplete-clang.log'
