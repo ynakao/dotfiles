@@ -40,3 +40,6 @@ complete -C aws_completer aws
 
 # Homebrew Cask installation directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Racer - code completion for Rust
+export PATH=$PATH:$HOME/.cargo/bin
