@@ -53,6 +53,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'justmao945/vim-clang'
 " Plug 'Rip-Rip/clang_complete'
 Plug 'zchee/deoplete-clang'
+Plug 'racer-rust/vim-racer'
 
 call plug#end()
 " </vim-plug settings>
@@ -151,3 +152,8 @@ let g:deoplete#sources#clang#sort_algo = 'alphabetical'
 " debug
 " let deoplete#enable_debug = 1
 " let g:deoplete#sources#clang#debug#log_file = '~/.log/nvim/python/deoplete-clang.log'
+
+" vim-racer settings
+set hidden
+let g:racer_cmd = "~/.cargo/bin/racer"
+let $RUST_SRC_PATH="~/Downloads/SyncDL/rust/src/"
