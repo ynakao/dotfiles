@@ -41,6 +41,7 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'benekastah/neomake'
+Plug 'mbbill/undotree'
 
 call plug#end()
 " </vim-plug settings>
@@ -96,3 +97,10 @@ let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_javascript_enabled_makers = ['jshint']
 " run neomake on the current file on every write
 autocmd! BufWritePost * Neomake
+
+" undotree settings
+" enable persistent undo
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
