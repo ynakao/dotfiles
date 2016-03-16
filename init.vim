@@ -101,6 +101,6 @@ autocmd! BufWritePost * Neomake
 " undotree settings
 " enable persistent undo
 if has("persistent_undo")
-    set undodir=~/.undodir/
+    set undodir=~/.config/nvim/undodir
     set undofile
 endif
