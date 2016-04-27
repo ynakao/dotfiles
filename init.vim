@@ -90,7 +90,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 "Rust semantic completion
-let g:ycm_rust_src_path = '~/Downloads/SyncDL/rust/src'
+let g:ycm_rust_src_path = '~/Downloads/SyncDL/repo/rust/src'
 
 " neomake settings
 let g:neomake_python_enabled_makers = ['flake8']
