@@ -31,7 +31,7 @@ function! BuildYCM(info)
   endif
 endfunction
 
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'Valloric/YouCompleteMe', { 'on': [], 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
@@ -45,6 +45,18 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 " </vim-plug settings>
+
+" Loading plugins manually
+" https://github.com/Valloric/YouCompleteMe/issues/893#issuecomment-53151235
+augroup load_ycm
+  autocmd!
+  autocmd! InsertEnter *
+        \ call plug#load('YouCompleteMe')     |
+        \ if exists('g:loaded_youcompleteme') |
+        \   call youcompleteme#Enable()       |
+        \ endif                               |
+        \ autocmd! load_ycm
+augroup END
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
