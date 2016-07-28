@@ -26,7 +26,6 @@ inoremap jj <Esc>
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'davidhalter/jedi-vim'
 Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
@@ -93,22 +92,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Close popup by <Space>.
 " inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 " </Neocomplete settings>
-
-" <Neocomplete-Jedi config>
-" ref: http://dackdive.hateblo.jp/entry/2014/08/13/130000
-" NOT to show docstrings
-autocmd FileType python setlocal completeopt-=preview
-" OFF auto selection
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-" let g:jedi#auto_vim_configuration = 0
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
-" </Neocomplete-Jedi config>
 
 " <python-mode settings>
 " disable syntax check because of confliction with syntastic
