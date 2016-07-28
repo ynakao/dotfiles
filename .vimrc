@@ -22,49 +22,24 @@ language C
 inoremap jj <Esc>
 " </key mapping>
 
-" <NeoBundle settings>
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" <vim-plug settings>
+call plug#begin('~/.vim/plugged')
 
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+Plug 'altercation/vim-colors-solarized'
+Plug 'davidhalter/jedi-vim'
+Plug 'fatih/vim-go'
+Plug 'itchyny/lightline.vim'
+Plug 'majutsushi/tagbar'
+Plug 'klen/python-mode'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/neocomplete.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
+Plug 'rust-lang/rust.vim'
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'klen/python-mode'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'rust-lang/rust.vim'
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-" </NeoBundle settings>
+call plug#end()
+" </vim-plug settings>
 
 set background=dark
 colorscheme solarized
