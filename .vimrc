@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'fatih/vim-go'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -46,12 +46,8 @@ let g:solarized_termcolors=256
 " Write after "set nocompatible"
 set whichwrap=b,s,h,l,<,>,[,],~
 
-" <lightline config>
+" vim-airline settings
 set laststatus=2
-set t_Co=256
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
 
 " NERDTree Toggle
 nnoremap <F2> :NERDTreeToggle<cr>
