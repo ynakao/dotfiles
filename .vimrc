@@ -29,7 +29,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'fatih/vim-go'
 Plug 'itchyny/lightline.vim'
 Plug 'majutsushi/tagbar'
-Plug 'klen/python-mode'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/neocomplete.vim'
@@ -92,14 +91,6 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Close popup by <Space>.
 " inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 " </Neocomplete settings>
-
-" <python-mode settings>
-" disable syntax check because of confliction with syntastic
-let g:pymode_lint = 0
-" Turn off code completion support in the plugin
-let g:pymode_rope_completion = 0
-" Turn on the rope script
-let g:pymode_rope = 0
 
 " syntastic settings
 let g:syntastic_python_checkers = ['flake8']
