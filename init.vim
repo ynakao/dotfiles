@@ -102,8 +102,10 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-"Rust semantic completion
+" rust settings
 let g:ycm_rust_src_path = '~/Downloads/SyncDL/repo/rust/src'
+let g:rustfmt_autosave = 1
+au FileType rust nmap <leader>r :RustRun<CR>
 
 " neomake settings
 let g:neomake_python_enabled_makers = ['flake8']
