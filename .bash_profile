@@ -40,3 +40,6 @@ complete -C aws_completer aws
 
 # Homebrew Cask installation directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# cargo settings
+export PATH=$PATH:~/.cargo/bin
