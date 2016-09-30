@@ -101,6 +101,7 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_term_mode = "split" " split terminal horizontally
 
 " rust settings
 let g:ycm_rust_src_path = '~/Downloads/SyncDL/repo/rust/src'
