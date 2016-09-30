@@ -43,3 +43,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # cargo settings
 export PATH=$PATH:~/.cargo/bin
+
+# added by Anaconda3 4.1.1 installer
+# export PATH="/Users/nakaoyuji/anaconda/bin:$PATH"
