@@ -119,3 +119,7 @@ if has("persistent_undo")
     set undodir=~/.config/nvim/undodir
     set undofile
 endif
+
+" compile cpp file shortcut settings
+au FileType cpp nmap <leader>r :!g++-6 -std=c++0x -o %< %<CR>
+au FileType cpp nmap <leader>e :!./%<<CR> " execute
