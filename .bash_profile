@@ -43,3 +43,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Racer - code completion for Rust
 export PATH=$PATH:$HOME/.cargo/bin
+export RUST_SRC_PATH=~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src
