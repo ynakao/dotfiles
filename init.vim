@@ -133,4 +133,4 @@ let g:deoplete#sources#clang#sort_algo = 'alphabetical'
 " vim-racer settings
 set hidden
 let g:racer_cmd = "~/.cargo/bin/racer"
-let $RUST_SRC_PATH="~/Downloads/SyncDL/rust/src/"
+let $RUST_SRC_PATH="~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src/"
