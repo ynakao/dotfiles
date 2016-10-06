@@ -22,49 +22,21 @@ language C
 inoremap jj <Esc>
 " </key mapping>
 
-" <NeoBundle settings>
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" <vim-plug settings>
+call plug#begin('~/.vim/plugged')
 
-if has('vim_starting')
-  set nocompatible               " Be iMproved
+Plug 'altercation/vim-colors-solarized'
+Plug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
+Plug 'rust-lang/rust.vim'
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'klen/python-mode'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Yggdroot/indentLine'
-NeoBundle 'rust-lang/rust.vim'
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-" </NeoBundle settings>
+call plug#end()
+" </vim-plug settings>
 
 set background=dark
 colorscheme solarized
@@ -74,74 +46,11 @@ let g:solarized_termcolors=256
 " Write after "set nocompatible"
 set whichwrap=b,s,h,l,<,>,[,],~
 
-" <lightline config>
+" vim-airline settings
 set laststatus=2
-set t_Co=256
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
 
 " NERDTree Toggle
 nnoremap <F2> :NERDTreeToggle<cr>
-
-" <Neocomplete settings>
-"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-" function! s:my_cr_function()
-"   " return neocomplete#close_popup() . "\<CR>"
-"   " For no inserting <CR> key.
-"   return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-" endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-" inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" inoremap <expr><C-y>  neocomplete#close_popup()
-" inoremap <expr><C-e>  neocomplete#cancel_popup()
-
-" Close popup by <Space>.
-" inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-" </Neocomplete settings>
-
-" <Neocomplete-Jedi config>
-" ref: http://dackdive.hateblo.jp/entry/2014/08/13/130000
-" NOT to show docstrings
-autocmd FileType python setlocal completeopt-=preview
-" OFF auto selection
-autocmd FileType python setlocal omnifunc=jedi#completions
-let g:jedi#completions_enabled = 0
-" let g:jedi#auto_vim_configuration = 0
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
-" </Neocomplete-Jedi config>
-
-" <python-mode settings>
-" disable syntax check because of confliction with syntastic
-let g:pymode_lint = 0
-" Turn off code completion support in the plugin
-let g:pymode_rope_completion = 0
-" Turn on the rope script
-let g:pymode_rope = 0
 
 " syntastic settings
 let g:syntastic_python_checkers = ['flake8']
