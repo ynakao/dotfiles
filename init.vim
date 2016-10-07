@@ -104,7 +104,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_term_mode = "split" " split terminal horizontally
 
 " rust settings
-let g:ycm_rust_src_path = '~/Downloads/SyncDL/repo/rust/src'
+let g:ycm_rust_src_path = '~/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
 let g:rustfmt_autosave = 1
 au FileType rust nmap <leader>r :RustRun<CR>
 
