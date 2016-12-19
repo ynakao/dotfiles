@@ -46,3 +46,5 @@ export PATH=$PATH:~/.cargo/bin
 
 # added by Anaconda3 4.1.1 installer
 # export PATH="/Users/nakaoyuji/anaconda/bin:$PATH"
+
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
