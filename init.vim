@@ -37,7 +37,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'Shougo/deoplete.nvim'
-Plug 'benekastah/neomake'
+Plug 'neomake/neomake'
 Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'justmao945/vim-clang'
