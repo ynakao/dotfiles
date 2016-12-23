@@ -27,7 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    !./install.sh --clang-completer
+    !./install.sh --clang-completer --gocode-completer --tern-completer --racer-completer
   endif
 endfunction
 
@@ -44,20 +44,16 @@ Plug 'benekastah/neomake'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-call plug#end()
-" </vim-plug settings>
-
 " Loading plugins manually
-" https://github.com/Valloric/YouCompleteMe/issues/893#issuecomment-53151235
+" https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
 augroup load_ycm
   autocmd!
-  autocmd! InsertEnter *
-        \ call plug#load('YouCompleteMe')     |
-        \ if exists('g:loaded_youcompleteme') |
-        \   call youcompleteme#Enable()       |
-        \ endif                               |
-        \ autocmd! load_ycm
+  autocmd InsertEnter * call plug#load('YouCompleteMe')
+                     \| autocmd! load_ycm
 augroup END
+
+call plug#end()
+" </vim-plug settings>
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
