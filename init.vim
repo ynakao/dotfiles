@@ -103,12 +103,12 @@ autocmd! BufWritePost * Neomake
 
 " deoplete-clang config
 " libclang shared library path
-let g:deoplete#sources#clang#libclang_path = '/usr/local/opt/llvm/lib/libclang.dylib'
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/3.9.0/lib/libclang.dylib'
 " or
 "let g:deoplete#sources#clang#libclang_path = '/opt/llvm/lib/libclang.so'
 
 " clang builtin header path
-let g:deoplete#sources#clang#clang_header = '/usr/local/opt/llvm/lib/clang/3.6.2/include/'
+let g:deoplete#sources#clang#clang_header = '/usr/local/opt/llvm/lib/clang'
 
 " libclang default compile flags
 let g:deoplete#sources#clang#flags = ['-x', 'c', '-std=c11']
