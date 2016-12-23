@@ -103,7 +103,7 @@ autocmd! BufWritePost * Neomake
 
 " deoplete-clang config
 " libclang shared library path
-let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/3.9.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/3.9.1/lib/libclang.dylib'
 " or
 "let g:deoplete#sources#clang#libclang_path = '/opt/llvm/lib/libclang.so'
 
