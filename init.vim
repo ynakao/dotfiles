@@ -43,6 +43,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'neomake/neomake'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Loading plugins manually
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
@@ -120,3 +121,7 @@ endif
 " compile cpp file shortcut settings
 au FileType cpp nmap <leader>r :!g++-6 -std=c++0x -o %< %<CR>
 au FileType cpp nmap <leader>e :!./%<<CR> " execute
+
+" fzf settings
+nnoremap <silent> <Leader><Leader> :Files<CR>
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
