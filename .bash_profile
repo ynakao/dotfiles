@@ -8,8 +8,7 @@ export ARCHFLAGS="-arch x86_64"
 # Load .bashrc if it exists
 test -f ~/.bashrc && source ~/.bashrc
 
-# To fix pelican-quickstart error
-# http://stackoverflow.com/questions/19961239/pelican-3-3-pelican-quickstart-error-valueerror-unknown-locale-utf-8
+# locale settings
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -31,6 +30,7 @@ complete -C aws_completer aws
 # cargo settings
 export PATH=$PATH:~/.cargo/bin
 
+# racer settings
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 
 # login fish shell
