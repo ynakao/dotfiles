@@ -40,7 +40,7 @@ call plug#end()
 
 set background=dark
 colorscheme solarized
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 
 " This enables cursor move to next or previous line at line ends.
 " Write after "set nocompatible"

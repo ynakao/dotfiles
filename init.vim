@@ -15,6 +15,7 @@ set noeb vb t_vb= "disable beep
 set backspace=2
 set shell=/bin/sh " in fish shell might need to add
 set whichwrap=b,s,h,l,<,>,[,],~ " write after "set nocompatible"
+set cursorline
 " set rtp+=/usr/local/opt/fzf
 syntax enable
 let mapleader="\<Space>"
@@ -35,7 +36,6 @@ Plug 'Valloric/YouCompleteMe', { 'on': [], 'do': function('BuildYCM') }
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
-" Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
@@ -44,8 +44,20 @@ Plug 'neomake/neomake'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-rsi'
 
-" Loading plugins manually
+call plug#end()
+" </vim-plug settings>
+
+" vim-color-solarized settings
+set background=dark
+colorscheme solarized
+" let g:solarized_termcolors=256
+
+" Load plugins manually when entering insert mode
 " https://github.com/junegunn/vim-plug/wiki/faq#loading-plugins-manually
 augroup load_ycm
   autocmd!
@@ -53,13 +65,10 @@ augroup load_ycm
                      \| autocmd! load_ycm
 augroup END
 
-call plug#end()
-" </vim-plug settings>
-
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
 let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
-let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+"let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
 let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 
@@ -70,11 +79,7 @@ let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" vim-color-solarized settings
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+nnoremap <leader>jd :YcmCompleter GoTo<CR> " jump to defenition
 
 " vim-airline settings
 set laststatus=2
@@ -82,9 +87,6 @@ set laststatus=2
 " tagbar settings
 nmap <leader>t :TagbarToggle<CR>
 let g:tagbar_width = 20
-
-" syntastic settings
-" let g:syntastic_python_checkers = ['flake8']
 
 " indentLine settings
 " disable auto hide feature
@@ -101,7 +103,6 @@ let g:go_highlight_build_constraints = 1
 let g:go_term_mode = "split" " split terminal horizontally
 
 " rust settings
-" let g:ycm_rust_src_path = $HOME . '/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
 let g:rustfmt_autosave = 1
 au FileType rust nmap <leader>r :RustRun<CR>
 
@@ -119,9 +120,20 @@ if has("persistent_undo")
 endif
 
 " compile cpp file shortcut settings
-au FileType cpp nmap <leader>r :!g++-6 -std=c++0x -o %< %<CR>
-au FileType cpp nmap <leader>e :!./%<<CR> " execute
+au FileType cpp nmap <leader>c :!g++-7 -std=c++0x -o %< %<CR>
+au FileType c,cpp nmap <leader>e :te ./%<<CR>
+au FileType c nmap <leader>c :!gcc-7 -o %< %<CR>
 
 " fzf settings
-nnoremap <silent> <Leader><Leader> :Files<CR>
-nnoremap <silent> <Leader><Enter> :Buffers<CR>
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+" make YCM compatible with UltiSnips (using supertab)
+" http://stackoverflow.com/a/22253548
+let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<C-j>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
