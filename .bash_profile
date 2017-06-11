@@ -18,6 +18,9 @@ export CLICOLOR=1
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
+# Set default editor
+export EDITOR=nvim
+
 # golang settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
