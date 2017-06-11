@@ -46,8 +46,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-rsi'
 
 call plug#end()
 " </vim-plug settings>
@@ -78,8 +76,13 @@ let g:ycm_confirm_extra_conf = 0 " ignore the confirmation of loading file
 " Enable python3 completetion
 let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
-let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
+set completeopt-=preview " disable preview window
+
 nnoremap <leader>jd :YcmCompleter GoTo<CR> " jump to defenition
+nnoremap <leader>gd :YcmCompleter GetDoc<CR> " open documentation
+nnoremap <leader>c <C-w>k<C-w>q " close documentation
 
 " vim-airline settings
 set laststatus=2
