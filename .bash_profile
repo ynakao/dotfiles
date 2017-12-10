@@ -38,3 +38,8 @@ export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 
 # login fish shell
 fish
+
+# Homebrew-ed perl caveats
+# https://github.com/Homebrew/homebrew-core/blob/1d1f4b48e2b1b519f48e8217ddf32d838095735e/Formula/perl.rb#L64-L69
+# read also https://github.com/KDE-mac/homebrew-kde/issues/141
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
