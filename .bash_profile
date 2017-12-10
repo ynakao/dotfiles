@@ -21,6 +21,9 @@ export TERM=xterm-256color
 # Set default editor
 export EDITOR=nvim
 
+# Set HISTSIZE
+export HISTSIZE=100000
+
 # golang settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
