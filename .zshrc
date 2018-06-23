@@ -169,3 +169,8 @@ test -f ~/.zshrc.priv && source ~/.zshrc.priv
 # https://github.com/Homebrew/homebrew-core/blob/1d1f4b48e2b1b519f48e8217ddf32d838095735e/Formula/perl.rb#L64-L69
 # read also https://github.com/KDE-mac/homebrew-kde/issues/141
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+
+# Google translate
+d () {
+    trans -d $1 | less -R
+}
