@@ -23,6 +23,10 @@ nnoremap <Space> <Nop>
 
 inoremap jj <Esc>
 
+" Python Provider Configuration
+let g:python_host_prog  = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " <vim-plug settings>
 call plug#begin('~/.config/nvim/plugged')
 
