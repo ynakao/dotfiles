@@ -90,6 +90,9 @@ man() {
 # Comp stuff
 #------------------------------
 fpath=(/usr/local/share/zsh/site-functions $fpath)
+# rustup completion
+# $ rustup completions zsh > ~/.zfunc/_rustup
+fpath+=~/.zfunc
 zmodload zsh/complist
 autoload -Uz compinit
 compinit
