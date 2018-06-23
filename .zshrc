@@ -173,3 +173,6 @@ test -f ~/.zshrc.priv && source ~/.zshrc.priv
 d () {
     trans -d $1 | less -R
 }
+
+# startup qutebrowser
+[ `pgrep -f /usr/local/bin/qutebrowser` ] || qutebrowser </dev/null >/dev/null 2>&1 &
